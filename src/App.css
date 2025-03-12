@@ -1,0 +1,90 @@
+* {
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --textColor: #000000;
+  --backgroundColor: #E7E4E4;
+  --backgroundColorDark: #3D4B60;
+  --border: 1px solid #3D4B60;
+  --dropdownHoverColor: lightgray;
+}
+[data-theme="dark"] {
+  --textColor: #FFFFFF;
+  --backgroundColor: #3D4B60;
+  --backgroundColorDark: #E7E4E4;
+  --border: 1px solid #E7E4E4;
+  --dropdownHoverColor: #596F91;
+}
+.light-mode {
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
+}
+#app-outer-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgroundColorDark);
+}
+#app-container {
+  height: 80%;
+  padding: 0;
+}
+
+#app-head {
+  border-bottom: var(--border);
+  height: 15%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#dropdown-container {
+  width: 50%;
+}
+.dropdown-item {
+  cursor: pointer;
+}
+#dropdown-btn {
+  border: var(--border);
+  color: var(--textColor);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#dropdown-btn:hover {
+  background-color: var(--dropdownHoverColor);
+}
+#submit-btn {
+  border: var(--border);
+  color: var(--textColor);
+  transition: all 150ms ease-in-out;
+}
+#submit-btn:hover {
+  background-color: var(--dropdownHoverColor);
+}
+#submit-btn:active {
+  scale: 0.9;
+}
+.color-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+#colors-container {
+  height: 80%;
+}
+#dark-light-switch {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+}
